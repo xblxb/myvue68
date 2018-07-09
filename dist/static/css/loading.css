@@ -1,0 +1,58 @@
+.loading {
+	/*background-color: black;*/
+	/*opacity: 0.7;*/
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.loading .mask {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: black;
+	opacity: 0.7;
+}
+
+.loading .spinner {
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 50vw;
+	height: 50vw;
+	margin: auto;
+	background-color: white;
+	top: 40vw;
+	z-index: 6;
+	border-radius: 50%;
+	-webkit-animation: scaleout 1.0s infinite ease-in-out;
+	animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+	0% {
+		-webkit-transform: scale(0.0)
+	}
+	100% {
+		-webkit-transform: scale(1.0);
+		opacity: 0;
+	}
+}
+
+@keyframes scaleout {
+	0% {
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	}
+	100% {
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+		opacity: 0;
+	}
+}
